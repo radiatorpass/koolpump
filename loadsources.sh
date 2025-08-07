@@ -1,0 +1,1 @@
+set -a && source /home/koolpump/koolpump/.env && set +a

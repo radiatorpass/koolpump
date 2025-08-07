@@ -1,0 +1,21 @@
+Thumbs.db
+.DS_Store
+.gradle
+build/
+target/
+out/
+.idea
+*.iml
+*.ipr
+*.iws
+.project
+.settings
+.classpath
+.factorypath
+
+
+#Ignore cursor AI rules
+.cursor/rules/codacy.mdc
+.env
+grails-wrapper.jar
+gradle/wrapper/gradle-wrapper.jar
