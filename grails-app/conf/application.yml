@@ -4,6 +4,7 @@ info:
     version: '@info.app.version@'
     grailsVersion: '@info.app.grailsVersion@'
 grails:
+  serverURL: http://koolpump.com
   cache:
     enabled: true
     cleanAtStartup: false
@@ -11,6 +12,21 @@ grails:
   codegen:
     defaultPackage: koolpump
   profile: web
+  plugin:
+    mail:
+        host: ${EMAIL_HOST:smtp.gmail.com}
+        port: ${EMAIL_PORT:587}
+        username: ${EMAIL_USERNAME:}
+        password: ${EMAIL_PASSWORD:}
+        props:
+            mail.smtp.auth: true
+            mail.smtp.starttls.enable: true
+            mail.smtp.starttls.required: true
+            mail.smtp.socketFactory.port: ${EMAIL_PORT:587}
+            mail.smtp.socketFactory.fallback: false
+        default:
+            from: ${EMAIL_FROM:noreply@hpdb.com}
+            replyTo: ${EMAIL_REPLY_TO:support@hpdb.com}
   mime:
     disable:
       accept:

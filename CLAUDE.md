@@ -79,6 +79,12 @@ Connection URLs:
 - Test: `jdbc:postgresql://localhost:5432/testDb`
 - Production: `jdbc:postgresql://localhost:5432/postgres`
 
+
+### Grails init commands
+
+curl --location --request GET 'https://latest.grails.org/create/web/koolpump.koolpump?gorm=HIBERNATE&servlet=TOMCAT&test=SPOCK&javaVersion=JDK_11&features=github-workflow-java-ci&features=cache&features=database-migration&features=postgres&features=spring-boot-devtools&features=logbackGroovy&features=grails-web-console&features=grails-quartz&features=hibernate-validator&features=views-json' --output koolpump.zip
+
+
 ### Key Plugins and Dependencies
 - **grails-plugin-postgresql** - PostgreSQL JDBC driver
 - **grails-plugin-quartz** - Job scheduling
