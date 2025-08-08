@@ -4,7 +4,6 @@ info:
     version: '@info.app.version@'
     grailsVersion: '@info.app.grailsVersion@'
 grails:
-  serverURL: http://www.koolpump.com
   cache:
     enabled: true
     cleanAtStartup: false
@@ -67,6 +66,7 @@ environments:
       dbCreate: create-drop
       url: jdbc:postgresql://localhost:5432/devDb
     grails:
+      serverURL: http://localhost:8080
       plugin:
         mail:
             host: ${EMAIL_HOST:smtp.gmail.com}
@@ -109,6 +109,7 @@ environments:
         jdbcInterceptors: ConnectionState
         defaultTransactionIsolation: 2
     grails:
+      serverURL: http://www.koolpump.com
       plugin:
         mail:
             host: ${EMAIL_HOST:smtp.gmail.com}

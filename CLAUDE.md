@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a Grails 6.2.3 web application using Gradle 7.6.4 build system, Java 11, and PostgreSQL database. The application follows standard Grails MVC architecture with GORM for data persistence.
 
+The Url is www.koolpump.com
+
 ## Essential Commands
 
 ### Running the Application
