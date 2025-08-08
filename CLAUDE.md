@@ -10,6 +10,10 @@ This is a Grails 6.2.3 web application using Gradle 7.6.4 build system, Java 11,
 
 ### Running the Application
 ```bash
+#Init env
+
+set -a && source /home/koolpump/koolpump/.env && set +a
+
 # Start development server
 ./gradlew bootRun
 

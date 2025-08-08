@@ -16,33 +16,7 @@
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark navbar-static-top" role="navigation">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-        </button>
-
-        <div class="collapse navbar-collapse" aria-expanded="false" style="height: 0.8px;" id="navbarContent">
-            <ul class="nav navbar-nav ml-auto">
-                <g:pageProperty name="page.nav"/>
-            </ul>
-        </div>
-    </div>
-</nav>
-
 <g:layoutBody/>
-
-<div class="footer" role="contentinfo">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
-        </div>
-    </div>
-</div>
 
 <div id="spinner" class="spinner" style="display:none;">
     <g:message code="spinner.alt" default="Loading&hellip;"/>
