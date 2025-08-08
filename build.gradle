@@ -16,10 +16,10 @@ plugins {
     id "com.github.erdi.webdriver-binaries" version "3.2"
     id "org.grails.plugins.views-json" version "3.2.3"
     id "war"
-    id "idea"
+//    id "idea"
     id "com.bertramlabs.asset-pipeline" version "4.5.1"
     id "application"
-    id "eclipse"
+//    id "eclipse"
 }
 
 // Not Published to Gradle Plugin Portal
@@ -60,7 +60,7 @@ dependencies {
     implementation "org.grails.plugins:database-migration:4.2.1"
     implementation "org.grails.plugins:gsp"
     implementation "org.grails.plugins:hibernate5"
-    implementation "org.grails.plugins:quartz:3.0.0"
+    //implementation "org.grails.plugins:quartz:3.0.0"
     implementation "org.grails.plugins:scaffolding"
     implementation "org.grails.plugins:views-json"
     implementation "org.grails.plugins:views-json-templates"
@@ -71,14 +71,14 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-logging"
     implementation "org.springframework.boot:spring-boot-starter-tomcat"
     implementation "org.springframework.boot:spring-boot-starter-validation"
-    compileOnly "io.micronaut:micronaut-inject-groovy"
+    //compileOnly "io.micronaut:micronaut-inject-groovy"
     console "org.grails:grails-console"
     runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails:4.5.1"
     runtimeOnly "org.apache.tomcat:tomcat-jdbc"
     runtimeOnly "org.fusesource.jansi:jansi:1.18"
     runtimeOnly "org.grails.plugins:grails-console:2.1.1"
     runtimeOnly "org.postgresql:postgresql"
-    testImplementation "io.micronaut:micronaut-inject-groovy"
+    //testImplementation "io.micronaut:micronaut-inject-groovy"
     testImplementation "org.grails:grails-gorm-testing-support"
     testImplementation "org.grails:grails-web-testing-support"
     testImplementation "org.grails:views-json-testing-support"
@@ -93,8 +93,8 @@ dependencies {
     testRuntimeOnly "org.seleniumhq.selenium:selenium-chrome-driver:4.19.1"
     testRuntimeOnly "org.seleniumhq.selenium:selenium-firefox-driver:4.19.1"
     testRuntimeOnly "org.seleniumhq.selenium:selenium-safari-driver:4.19.1"
-    implementation 'org.grails.plugins:mail:3.0.0'
-    implementation 'org.grails.plugins:spring-security-core:5.3.0'
+    //implementation 'org.grails.plugins:mail:3.0.0'
+    //implementation 'org.grails.plugins:spring-security-core:6.1.2'
 }
 
 application {
