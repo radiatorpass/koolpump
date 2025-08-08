@@ -67,21 +67,20 @@ environments:
       url: jdbc:postgresql://localhost:5432/devDb
     grails:
       serverURL: http://localhost:8080
-      plugin:
-        mail:
-            host: ${EMAIL_HOST:smtp.gmail.com}
-            port: ${EMAIL_PORT:587}
-            username: ${EMAIL_USERNAME:}
-            password: ${EMAIL_PASSWORD:}
-            props:
-                mail.smtp.auth: true
-                mail.smtp.starttls.enable: true
-                mail.smtp.starttls.required: true
-                mail.smtp.socketFactory.port: ${EMAIL_PORT:587}
-                mail.smtp.socketFactory.fallback: false
-            default:
-                from: ${EMAIL_FROM:noreply@hpdb.com}
-                replyTo: ${EMAIL_REPLY_TO:support@hpdb.com}
+      mail:
+          host: ${EMAIL_HOST:smtp.gmail.com}
+          port: ${EMAIL_PORT:587}
+          username: ${EMAIL_USERNAME:}
+          password: ${EMAIL_PASSWORD:}
+          props:
+              mail.smtp.auth: true
+              mail.smtp.starttls.enable: true
+              mail.smtp.starttls.required: true
+              mail.smtp.socketFactory.port: ${EMAIL_PORT:587}
+              mail.smtp.socketFactory.fallback: false
+          default:
+              from: ${EMAIL_FROM:noreply@hpdb.com}
+              replyTo: ${EMAIL_REPLY_TO:support@hpdb.com}
   test:
     dataSource:
       dbCreate: update
@@ -110,21 +109,21 @@ environments:
         defaultTransactionIsolation: 2
     grails:
       serverURL: http://www.koolpump.com
+      mail:
+          host: ${EMAIL_HOST:smtp.gmail.com}
+          port: ${EMAIL_PORT:587}
+          username: ${EMAIL_USERNAME:}
+          password: ${EMAIL_PASSWORD:}
+          props:
+              mail.smtp.auth: true
+              mail.smtp.starttls.enable: true
+              mail.smtp.starttls.required: true
+              mail.smtp.socketFactory.port: ${EMAIL_PORT:587}
+              mail.smtp.socketFactory.fallback: false
+          default:
+              from: ${EMAIL_FROM:noreply@hpdb.com}
+              replyTo: ${EMAIL_REPLY_TO:support@hpdb.com}
       plugin:
-        mail:
-            host: ${EMAIL_HOST:smtp.gmail.com}
-            port: ${EMAIL_PORT:587}
-            username: ${EMAIL_USERNAME:}
-            password: ${EMAIL_PASSWORD:}
-            props:
-                mail.smtp.auth: true
-                mail.smtp.starttls.enable: true
-                mail.smtp.starttls.required: true
-                mail.smtp.socketFactory.port: ${EMAIL_PORT:587}
-                mail.smtp.socketFactory.fallback: false
-            default:
-                from: ${EMAIL_FROM:noreply@hpdb.com}
-                replyTo: ${EMAIL_REPLY_TO:support@hpdb.com}
         console:
           enabled: false
           fileStore:
