@@ -117,16 +117,26 @@
 <body>
 
 <div class="language-selector">
-    <select id="languageSelect" onchange="changeLanguage(this.value)">
-        <option value="en" ${params.lang == 'en' || !params.lang ? 'selected' : ''}><g:message code="lang.english" default="English"/></option>
-        <option value="de" ${params.lang == 'de' ? 'selected' : ''}><g:message code="lang.german" default="Deutsch"/></option>
-        <option value="fr" ${params.lang == 'fr' ? 'selected' : ''}><g:message code="lang.french" default="Français"/></option>
-        <option value="it" ${params.lang == 'it' ? 'selected' : ''}><g:message code="lang.italian" default="Italiano"/></option>
-        <option value="es" ${params.lang == 'es' ? 'selected' : ''}><g:message code="lang.spanish" default="Español"/></option>
-        <option value="nl" ${params.lang == 'nl' ? 'selected' : ''}><g:message code="lang.dutch" default="Nederlands"/></option>
-        <option value="pl" ${params.lang == 'pl' ? 'selected' : ''}><g:message code="lang.polish" default="Polski"/></option>
-        <option value="sv" ${params.lang == 'sv' ? 'selected' : ''}><g:message code="lang.swedish" default="Svenska"/></option>
-    </select>
+    <div style="display: flex; align-items: center; gap: 10px;">
+        <select id="languageSelect" onchange="changeLanguage(this.value)">
+            <option value="en" ${params.lang == 'en' || !params.lang ? 'selected' : ''}><g:message code="lang.english" default="English"/></option>
+            <option value="de" ${params.lang == 'de' ? 'selected' : ''}><g:message code="lang.german" default="Deutsch"/></option>
+            <option value="fr" ${params.lang == 'fr' ? 'selected' : ''}><g:message code="lang.french" default="Français"/></option>
+            <option value="it" ${params.lang == 'it' ? 'selected' : ''}><g:message code="lang.italian" default="Italiano"/></option>
+            <option value="es" ${params.lang == 'es' ? 'selected' : ''}><g:message code="lang.spanish" default="Español"/></option>
+            <option value="nl" ${params.lang == 'nl' ? 'selected' : ''}><g:message code="lang.dutch" default="Nederlands"/></option>
+            <option value="pl" ${params.lang == 'pl' ? 'selected' : ''}><g:message code="lang.polish" default="Polski"/></option>
+            <option value="sv" ${params.lang == 'sv' ? 'selected' : ''}><g:message code="lang.swedish" default="Svenska"/></option>
+        </select>
+        <g:if test="${session.user}">
+            <g:link controller="dashboard" action="index" class="btn btn-sm btn-primary">Dashboard</g:link>
+            <g:link controller="auth" action="logout" class="btn btn-sm btn-secondary">Logout</g:link>
+        </g:if>
+        <g:else>
+            <g:link controller="auth" action="login" class="btn btn-sm btn-primary">Login</g:link>
+            <g:link controller="registration" action="register" class="btn btn-sm btn-secondary">Sign Up</g:link>
+        </g:else>
+    </div>
 </div>
 
 <div class="hero-section">
@@ -255,9 +265,16 @@
     <div class="text-center">
         <h2><g:message code="cta.final.title" default="Ready to Find Your Perfect Heat Pump?"/></h2>
         <p class="lead mt-3 mb-4"><g:message code="cta.final.subtitle" default="Join thousands of homeowners and professionals using KoolPump to make informed decisions"/></p>
-        <a href="#" class="cta-button" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
-            <g:message code="cta.getstarted" default="Get Started Free"/>
-        </a>
+        <g:if test="${session.user}">
+            <g:link controller="dashboard" action="index" class="cta-button" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                <g:message code="cta.dashboard" default="Go to Dashboard"/>
+            </g:link>
+        </g:if>
+        <g:else>
+            <g:link controller="registration" action="register" class="cta-button" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                <g:message code="cta.getstarted" default="Get Started Free"/>
+            </g:link>
+        </g:else>
     </div>
 </div>
 
