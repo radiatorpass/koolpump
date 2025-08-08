@@ -2,8 +2,8 @@ package koolpump.user
 
 import grails.gorm.transactions.Transactional
 import groovy.util.logging.Slf4j
-import koolpump.user.Subscription
-import koolpump.user.Payment
+//import koolpump.user.Subscription
+//import koolpump.user.Payment
 import koolpump.user.KpUser
 
 @Transactional
@@ -54,7 +54,7 @@ class EmailService {
         }
     }
 
-    def sendSubscriptionConfirmation(KpUser user, Subscription subscription) {
+/*    def sendSubscriptionConfirmation(KpUser user, Subscription subscription) {
         try {
             def mailService = grails.util.Holders.applicationContext.getBean("mailService")
             
@@ -71,9 +71,9 @@ class EmailService {
             log.error "Failed to send subscription confirmation email to ${user.email}: ${e.message}", e
             return [success: false, error: e.message]
         }
-    }
+    }*/
 
-    def sendTrialExpiryReminder(KpUser user, int daysRemaining) {
+/*    def sendTrialExpiryReminder(KpUser user, int daysRemaining) {
         try {
             def mailService = grails.util.Holders.applicationContext.getBean("mailService")
             
@@ -90,9 +90,9 @@ class EmailService {
             log.error "Failed to send trial expiry reminder email to ${user.email}: ${e.message}", e
             return [success: false, error: e.message]
         }
-    }
+    }*/
 
-    def sendPaymentFailedNotification(KpUser user, Payment payment) {
+/*    def sendPaymentFailedNotification(KpUser user, Payment payment) {
         try {
             def mailService = grails.util.Holders.applicationContext.getBean("mailService")
             
@@ -109,9 +109,9 @@ class EmailService {
             log.error "Failed to send payment failed notification email to ${user.email}: ${e.message}", e
             return [success: false, error: e.message]
         }
-    }
+    }*/
 
-    def sendPaymentSuccessNotification(KpUser user, Payment payment) {
+/*    def sendPaymentSuccessNotification(KpUser user, Payment payment) {
         try {
             def mailService = grails.util.Holders.applicationContext.getBean("mailService")
             
@@ -128,5 +128,5 @@ class EmailService {
             log.error "Failed to send payment success notification email to ${user.email}: ${e.message}", e
             return [success: false, error: e.message]
         }
-    }
+    }*/
 }

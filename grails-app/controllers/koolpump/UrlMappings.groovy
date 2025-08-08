@@ -49,8 +49,8 @@ class UrlMappings {
         // Admin routes
         "/admin"(controller: "admin", action: "index")
         "/admin/users"(controller: "admin", action: "users")
-        "/admin/payments"(controller: "admin", action: "payments")
-        "/admin/subscriptions"(controller: "admin", action: "subscriptions")
+        //"/admin/payments"(controller: "admin", action: "payments")
+        //"/admin/subscriptions"(controller: "admin", action: "subscriptions")
         "/admin/contact-messages"(controller: "admin", action: "contactMessages")
         
         // Contact routes

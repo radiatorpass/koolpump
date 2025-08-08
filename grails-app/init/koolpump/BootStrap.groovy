@@ -1,7 +1,7 @@
 package koolpump
 
 import koolpump.user.KpUser
-import koolpump.user.Subscription
+//import koolpump.user.Subscription
 import koolpump.user.UserActivityLog
 import koolpump.user.UserService
 import java.security.MessageDigest
@@ -32,7 +32,7 @@ class BootStrap {
             
             if (adminKpUser.save(flush: true)) {
                 // Create trial subscription for admin
-                def subscription = new Subscription(
+/*                def subscription = new Subscription(
                     user: adminUser,
                     planName: 'Enterprise',
                     planType: 'ENTERPRISE',
@@ -40,7 +40,7 @@ class BootStrap {
                     startDate: new Date(),
                     monthlyPrice: 0.0
                 )
-                subscription.save(flush: true)
+                subscription.save(flush: true)*/
                 
                 log.info "Admin user created: ${adminEmail}"
             } else {

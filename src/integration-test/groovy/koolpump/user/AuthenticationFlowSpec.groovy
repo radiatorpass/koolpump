@@ -14,7 +14,7 @@ class AuthenticationFlowSpec extends Specification {
 
     UserService userService
     EmailService emailService
-    SubscriptionService subscriptionService
+    //SubscriptionService subscriptionService
     
     GreenMail greenMail
     
