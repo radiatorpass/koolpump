@@ -135,3 +135,70 @@ hibernate:
     use_second_level_cache: false
     use_query_cache: false
 quartz.autoStartup: true
+
+---
+# Application specific configuration
+app:
+  baseUrl: ${APP_BASE_URL:http://www.koolpump.com}
+  
+# Stripe Configuration
+stripe:
+  publicKey: ${STRIPE_PUBLIC_KEY:pk_test_placeholder}
+  secretKey: ${STRIPE_SECRET_KEY:sk_test_placeholder}
+  webhookSecret: ${STRIPE_WEBHOOK_SECRET:whsec_placeholder}
+
+# OAuth Configuration
+oauth:
+  google:
+    clientId: ${GOOGLE_CLIENT_ID:google_client_id_placeholder}
+    clientSecret: ${GOOGLE_CLIENT_SECRET:google_client_secret_placeholder}
+  microsoft:
+    clientId: ${MICROSOFT_CLIENT_ID:microsoft_client_id_placeholder}
+    clientSecret: ${MICROSOFT_CLIENT_SECRET:microsoft_client_secret_placeholder}
+
+# reCAPTCHA Configuration
+recaptcha:
+  siteKey: ${RECAPTCHA_SITE_KEY:6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI}
+  secretKey: ${RECAPTCHA_SECRET_KEY:6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe}
+
+# Two-Factor Authentication
+twoFactor:
+  issuer: KoolPump
+  qrCodeWidth: 200
+  qrCodeHeight: 200
+
+# Security Settings
+security:
+  password:
+    minLength: 6
+    expiryDays: 90
+  session:
+    timeout: 1800 # 30 minutes in seconds
+  token:
+    registrationExpiry: 24 # hours
+    passwordResetExpiry: 12 # hours
+
+# Subscription Settings
+subscription:
+  trial:
+    days: 14
+  plans:
+    basic:
+      price: 9.99
+      currency: EUR
+    professional:
+      price: 29.99
+      currency: EUR
+    enterprise:
+      price: 99.99
+      currency: EUR
+
+# Email Settings (already configured above)
+# Additional email templates
+email:
+  templates:
+    registration: /email/registration
+    passwordReset: /email/passwordReset
+    subscriptionConfirmation: /email/subscriptionConfirmation
+    paymentSuccess: /email/paymentSuccess
+    paymentFailed: /email/paymentFailed

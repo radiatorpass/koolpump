@@ -90,11 +90,17 @@ dependencies {
     testImplementation "org.testcontainers:postgresql"
     testImplementation "org.testcontainers:spock"
     testImplementation "org.testcontainers:testcontainers"
+    testImplementation "com.icegreen:greenmail:2.0.1"
+    testImplementation "com.icegreen:greenmail-junit5:2.0.1"
     testRuntimeOnly "org.seleniumhq.selenium:selenium-chrome-driver:4.19.1"
     testRuntimeOnly "org.seleniumhq.selenium:selenium-firefox-driver:4.19.1"
     testRuntimeOnly "org.seleniumhq.selenium:selenium-safari-driver:4.19.1"
     implementation 'org.grails.plugins:mail:3.0.0'
-    //implementation 'org.grails.plugins:spring-security-core:6.1.2'
+    implementation 'org.grails.plugins:spring-security-core:6.1.2'
+    implementation 'com.stripe:stripe-java:29.4.0'
+    implementation 'org.mindrot:jbcrypt:0.4'
+    implementation 'org.owasp.encoder:encoder:1.2.3'
+    implementation 'com.github.ben-manes.caffeine:caffeine:3.1.8'
 }
 
 application {
